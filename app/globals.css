@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 96%; /* Soft light */
+    --foreground: 210 20% 20%; /* Dark text */
+
+    --card: 240 80% 95%; /* Light card */
+    --card-foreground: 240 60% 20%; /* Dark card text */
+
+    --popover: 240 90% 95%; /* Soft popover */
+    --popover-foreground: 240 50% 15%; /* Dark popover text */
+
+    --primary: 320 70% 50%; /* Vivid turquoise */
+    --primary-foreground: 0 0% 100%; /* White text for primary */
+
+    --secondary: 60 100% 50%; /* Bright yellow */
+    --secondary-foreground: 0 0% 20%; /* Dark text for secondary */
+
+    --muted: 220 20% 90%; /* Soft muted */
+    --muted-foreground: 240 50% 20%; /* Dark muted text */
+
+    --accent: 290 70% 60%; /* Rich pink */
+    --accent-foreground: 0 0% 100%; /* White text for accent */
+
+    --destructive: 0 100% 60%; /* Bright red */
+    --destructive-foreground: 0 0% 100%; /* White text for destructive */
+
+    --border: 210 30% 80%; /* Light border */
+    --input: 210 30% 90%; /* Light input */
+    --ring: 320 80% 60%; /* Bright turquoise ring */
+
+    --radius: 0.5rem; /* Rounded corners */
+  }
+
+  .dark {
+    --background: 210 20% 20%; /* Dark background */
+    --foreground: 210 90% 90%; /* Light text */
+
+    --card: 210 30% 25%; /* Dark card */
+    --card-foreground: 210 90% 90%; /* Light card text */
+
+    --popover: 210 30% 30%; /* Dark popover */
+    --popover-foreground: 210 90% 90%; /* Light popover text */
+
+    --primary: 0 100% 100%; /* Bright white */
+    --primary-foreground: 240 80% 20%; /* Dark text for primary */
+
+    --secondary: 60 100% 80%; /* Light yellow */
+    --secondary-foreground: 210 20% 20%; /* Dark text for secondary */
+
+    --muted: 220 20% 30%; /* Dark muted */
+    --muted-foreground: 240 80% 70%; /* Light muted text */
+
+    --accent: 290 70% 40%; /* Dark pink */
+    --accent-foreground: 0 0% 100%; /* White text for accent */
+
+    --destructive: 0 100% 50%; /* Bright red */
+    --destructive-foreground: 210 90% 90%; /* Light text for destructive */
+
+    --border: 210 30% 40%; /* Dark border */
+    --input: 210 30% 50%; /* Dark input */
+    --ring: 320 80% 80%; /* Bright turquoise ring */
+  }
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-inter), sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
